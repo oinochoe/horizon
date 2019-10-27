@@ -1,0 +1,11 @@
+.swiper-container {
+  width: $w100;
+  height: 300px;
+  @media screen and (max-width: 1024px) {
+    height: auto;
+    .swiper-wrapper {
+      display: block;
+      background: #efefef;
+    }
+  }
+}
