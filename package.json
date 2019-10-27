@@ -28,6 +28,6 @@
   },
   "dependencies": {
     "lodash": "^4.17.15",
-    "skrollr": "^0.6.26"
+    "swiper": "^5.2.0"
   }
 }

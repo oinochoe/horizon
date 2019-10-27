@@ -59,20 +59,26 @@
       type="image/x-icon"
       sizes="16x16"
     />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css" />
   </head>
   <body>
     <header>
       <h1></h1>
     </header>
-    <section
-      class="container"
-      data-0="transform:translateX(0%)"
-      data-500="transform:translateX(-100%)"
-      data-1000="transform:translateX(-200%)"
-    >
-      <div style="background-color:red">sdafsdfasdfsdfsdfasdfasdfasdf</div>
-      <div style="background-color:blue">sdafsdfsdfasdfds</div>
-      <div style="background-color:yellow">sdafsdfsdfasdfds</div>
-    </section>
+    <!-- Slider main container -->
+    <div class="swiper-container">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">Slide 1</div>
+        <div class="swiper-slide">Slide 2</div>
+        <div class="swiper-slide">Slide 3</div>
+      </div>
+
+      <!-- If we need scrollbar -->
+      <div class="swiper-scrollbar"></div>
+      <!-- Add Pagination -->
+      <div class="swiper-pagination"></div>
+    </div>
   </body>
 </html>

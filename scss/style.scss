@@ -8,21 +8,15 @@ p {
 body {
   background: dodgerblue;
 }
-.container {
+
+.swiper-container {
   width: 100%;
-  position: fixed;
-  left: 0;
-  top: 0;
-  display: flex;
-  -webkit-overflow-scrolling: touch;
-  div {
-    display: flex;
-    min-width: 100%;
-    height: 100vh;
-  }
+  height: 300px;
   @media screen and (max-width: 1024px) {
-    transform: none !important;
-    position: static;
-    display: block;
+    height: auto;
+    .swiper-wrapper {
+      display: block;
+      background: #efefef;
+    }
   }
 }
