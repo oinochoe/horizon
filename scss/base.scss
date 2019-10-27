@@ -1,19 +1,56 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
-$roboto: "Roboto", sans-serif;
+@font-face {
+  font-family: "NotoSansKR";
+  font-style: normal;
+  font-weight: 400;
+  src: url("https://s1.pearlcdn.com/KR/contents/fonts/notosanskr-regular2.eot");
+  src: local("※"),
+    url("https://s1.pearlcdn.com/KR/contents/fonts/notosanskr-regular2.woff2")
+      format("woff2"),
+    url("https://s1.pearlcdn.com/KR/contents/fonts/notosanskr-regular2.woff")
+      format("woff"),
+    url("https://s1.pearlcdn.com/KR/contents/fonts/notosanskr-regular2.otf")
+      format("opentype"),
+    url("https://s1.pearlcdn.com/KR/contents/fonts/notosanskr-regular2.svg")
+      format("svg");
+}
+$roboto: "Roboto";
+$noto: "NotoSansKR";
 $primary-color: #393838;
-html {
-  font-size: 16px;
-  @media (max-width: 1000px) {
-    font-size: calc(12px + 0.4vw);
-  }
-}
-body {
-  font-family: $roboto;
-  font-size: 1rem;
-}
+
+@import "_reset.scss";
+@import "_font.scss";
+
 @mixin border-radius($radius) {
   -webkit-border-radius: $radius;
   -moz-border-radius: $radius;
   -ms-border-radius: $radius;
   border-radius: $radius;
+}
+
+[data-ephox-mobile-fullscreen-style] header {
+  display: none;
+}
+
+body {
+  font-family: $roboto, $noto, sans-serif;
+  word-break: keep-all;
+  word-wrap: break-word;
+}
+a,
+input,
+select,
+textarea,
+button,
+label {
+  -webkit-appearance: none;
+  -ms-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0;
+  vertical-align: top;
+}
+::-ms-clear,
+::-ms-reveal {
+  display: none;
 }

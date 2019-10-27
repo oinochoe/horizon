@@ -5,7 +5,7 @@ module.exports = {
   mode: "none",
   entry: "./src/index.js",
   output: {
-    filename: "bundle.js",
+    filename: "landing.js",
     path: path.resolve(__dirname, "dist")
   },
   devtool: "cheap-eval-source-map",
