@@ -3,27 +3,27 @@ var HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   mode: "none",
-  entry: "./src/index.js",
+  entry: "./src/landing.js",
   output: {
     filename: "landing.js",
-    path: path.resolve(__dirname, "dist")
+    path: path.resolve(__dirname, "dist"),
   },
   devtool: "cheap-eval-source-map",
   devServer: {
     port: 9000,
-    hot: true // 바로바로 스타일시트가 반영
+    hot: true, // 바로바로 스타일시트가 반영
   },
   plugins: [
     new HtmlWebpackPlugin({
       // index.html 템플릿을 기반으로 빌드 결과물을 추가해줌
-      template: "index.html"
-    })
+      template: "index.html",
+    }),
   ],
   module: {
     rules: [
       {
         test: /\.css$/,
-        use: ["css-loader"]
+        use: ["css-loader"],
       },
       {
         test: /\.m?js$/,
@@ -31,9 +31,9 @@ module.exports = {
         use: {
           loader: "babel-loader",
           options: {
-            presets: ["@babel/preset-env"]
-          }
-        }
+            presets: ["@babel/preset-env"],
+          },
+        },
       },
       {
         test: /\.s[ac]ss$/i,
@@ -43,9 +43,18 @@ module.exports = {
           // Translates CSS into CommonJS
           "css-loader",
           // Compiles Sass to CSS
-          "sass-loader"
-        ]
-      }
-    ]
-  }
+          "sass-loader",
+        ],
+      },
+      {
+        test: /\.(frag|vert|glsl)$/,
+        use: [
+          {
+            loader: "glsl-shader-loader",
+            options: {},
+          },
+        ],
+      },
+    ],
+  },
 };
