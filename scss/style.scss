@@ -1,6 +1,6 @@
 @import "base";
 @import "swiper";
-/* @import "text"; */
+@import "text";
 
 p {
   border: 1px solid #ccc;
@@ -14,4 +14,25 @@ header {
   display: block;
   height: 500px;
   background: white;
+  h1 {
+    position: relative;
+    color: black;
+    font-size: 50px;
+    text-align: center;
+    span {
+      top: -15px;
+      opacity: 0;
+      position: relative;
+      &.in {
+        opacity: 1;
+        top: 0;
+      }
+    }
+  }
+}
+
+@for $i from 1 through 40 {
+  .awesome span:nth-child(#{$i}) {
+    transition: all 0.3s ease ($i / 20#{s});
+  }
 }
