@@ -12,5 +12,3 @@ setTimeout(function() {
     e.classList.add("in");
   });
 }, 800);
-
-export default Letter;
