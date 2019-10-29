@@ -59,6 +59,8 @@
       type="image/x-icon"
       sizes="16x16"
     />
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css" />
   </head>
   <body>
     <header>
@@ -69,6 +71,28 @@
         <span>sub title</span>
       </h2>
     </header>
+
+    <!-- Slider main container -->
+    <div class="swiper-container">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">
+          <img
+            src="https://i.ytimg.com/vi/97MZ1bx6suY/maxresdefault.jpg"
+            alt=""
+          />
+        </div>
+        <div class="swiper-slide">Slide 2</div>
+        <div class="swiper-slide">Slide 3</div>
+      </div>
+
+      <!-- If we need scrollbar -->
+      <div class="swiper-scrollbar"></div>
+      <!-- Add Pagination -->
+      <div class="swiper-pagination"></div>
+    </div>
+
     <section class="horizon">
       <div>1</div>
       <div>2</div>

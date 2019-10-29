@@ -9,7 +9,7 @@ import Horizon from "../components/Horizon";
   "use strict";
 
   function init() {
-    // swiperStart();
+    swiperStart();
     letterAni();
     horizonScroll();
   }

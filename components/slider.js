@@ -19,10 +19,11 @@ const enableSwiper = function() {
     slidesPerView: 1,
     spaceBetween: 0,
     grabCursor: true,
+    parallax: true,
+    slidesPerView: "auto",
     freeModeMinimumVelocity: 0.3,
     mousewheel: { invert: false },
     speed: 1500,
-    parallax: true,
     pagination: {
       el: ".swiper-pagination",
       type: "progressbar",
